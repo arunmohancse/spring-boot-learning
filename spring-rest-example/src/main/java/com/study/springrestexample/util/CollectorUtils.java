@@ -24,6 +24,7 @@ public final class CollectorUtils {
 	public static <T> Collector<T, ?, T> toSingleton() {
 		return Collectors.collectingAndThen(Collectors.toList(), list -> {
 			if (list.size() != 1) {
+			    // if more than one or no element is present then it should return null
 			    return null;
 			}
 			return list.get(0);

@@ -12,7 +12,11 @@ import com.study.springrestexample.dto.ProductDto;
  * @author 927941
  *
  */
-public class ProductTestData {
+public final class ProductTestData {
+    
+    private ProductTestData() {
+        // To hide instantiation
+    }
 
 	public static List<ProductDto> getAllProductDto() {
 		List<ProductDto> products = new ArrayList<>();
